@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="row">
+
+    <div class="col-lg-4 col-md-6 col-sm-12" >
+
+          <form  #addProductForm="ngForm" (ngSubmit)="onSubmit(addProductForm)"> 
+          <div class="form-group">
+              <label for="Name" class="form-label"> Name </label>
+              <input type="text" class="form-control"
+              ngModel name="Name"
+              #Name="ngModel">
+  
+          </div>
+          <div class="form-group">
+              <label for="date" class="form-label">date </label>
+              <input type="date" class="form-control"
+              ngModel name="date"
+              #date="ngModel">
+  
+          </div>
+          <div class="form-group">
+              <label for="email" class="form-label">Email </label>
+              <input type="email" class="form-control"
+              ngModel name="email"
+              #email="ngModel">
+  
+          </div>
+          <div class="form-group">
+             
+              <input type="radio"  ngModel name="patient" #patient="ngModel" >Inpatient
+              <input type="radio"  ngModel name="patient" #patient="ngModel" >Outpatient
+  
+  
+          </div>
+          <div class="card-footer"> 
+              <button type="submit" class="btn btn-primary me-3">submit</button>
+              <button type="reset" class="btn btn-secondary">reset</button>
+  
+  
+          </div>
+          
+      </form>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12" [ngClass]="'vani'">
+       content1
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12" [ngClass]="'vani'">
+        contet3
+            </div>
+    </div>
+
+  </div>
