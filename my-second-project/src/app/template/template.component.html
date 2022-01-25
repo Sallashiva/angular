@@ -1,0 +1,21 @@
+<div class="col-md-4 offset-md-4"><br><br>
+
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" required minlength="3"
+           ngModel name="emailField" #emailField="ngModel">
+          <div *ngIf="emailField.touched && emailField.invalid" class="text-danger">this filed mantodory</div>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" required id="password" 
+          ngModel name="passwordField" #passwordField="ngModel">
+        </div>
+        <div *ngIf="passwordField.touched && passwordField.invalid" class="text-danger">this field mantodory</div>
+        <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary">Submit</button>
+      </form>
+
+
+
+</div>

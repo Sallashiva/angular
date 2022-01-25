@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "productName": "shoes",
+      "productBrand": "nike",
+      "price": "3000"
+    },
+    {
+      "id": "2",
+      "productName": "jeans",
+      "productBrand": "killer",
+      "price": "3000"
+    },
+    {
+      "id": "6",
+      "productName": "shiva",
+      "productBrand": "kumar",
+      "price": "100"
+    }
+  ]
+}

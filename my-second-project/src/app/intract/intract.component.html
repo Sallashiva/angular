@@ -1,0 +1,23 @@
+<p>intract works!</p>
+
+
+<table class="table mt-2">
+    <tr>
+        <th>id</th>
+     <th>productName</th>
+     <th>productBrand</th>
+     <th>price</th>
+    </tr>
+    <tr *ngFor="let nani of shiva;index as i" >
+        <td>{{nani.id}}</td>
+        <td>{{nani.productName}}</td>
+      <td>{{nani.productBrand}}</td>
+      <td>{{nani.price}}</td>
+    </tr>
+    <input type="text" placeholder="enter id" [(ngModel)]="id"><br>
+    <input type="text" placeholder=" enter productname" [(ngModel)]="name"><br>
+    <input type="text" placeholder="enter product brand" [(ngModel)]="brand"><br>
+    <input type="text" placeholder="enter price" [(ngModel)]= "price"><br>
+    <button (click)="addProduct()">addproduct</button>
+    <button (click)="update()">upadate</button>
+    <button (click)="delate()">delete</button>

@@ -1,0 +1,32 @@
+              <!-- {{empDate.empName | uppercase|json}}<br>
+
+
+                {{empDate.empSalary | currency:'INR'}} <br>
+
+
+                {{empDate.DOB  | date:"MMMM/dd/yyyy"}} -->
+                {{date | date:"MMMM/dd/yyyy"}}
+
+    <input class=" mt-4" type="text" placeholder="search name"  [(ngModel)]="seachIteam">
+    
+     
+
+
+                <table class="table mt-2">
+                  <tr>
+                   <th>Name</th>
+                   <th>SAlary</th>
+                   <th>Role</th>
+                  </tr>
+                  <tr *ngFor="let deatail of empData | custompipe:seachIteam" >
+                    <td>{{deatail.name}}</td>
+                    <td>{{deatail.salary}}</td>
+                    <td>{{deatail.role}}</td>
+                  </tr>
+
+
+
+                </table>
+
+
+

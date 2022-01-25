@@ -1,0 +1,69 @@
+<div class="col-md-4 offset-md-4"><br><br>
+
+    <form  [formGroup]="signInform"  (ngSubmit)="onFormSubmit()">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" formControlName="email" [ngClass]="{'errorClass' : f.email.errors &&
+          f.email.touched }">
+          </div>
+          <div *ngIf="f.email.touched && f.email.invalid">
+            <div class="text-danger" *ngIf="f.email.errors.required">
+                this filed mandatory
+            </div>
+          </div>
+          
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <!-- <input type="password" class="form-control" id="password" 
+          formControlName="password"[ngClass]="{'errorClass' : signInform.get('password').errors &&
+          signInform.get('password').touched }" > -->
+          <input type="password" class="form-control" id="password" 
+          formControlName="password"[ngClass]="{'errorClass' : f.password.errors &&
+          f.password.touched }" >
+        </div>
+        <div *ngIf="f.password.touched && f.password.invalid">
+          <div class="text-danger" *ngIf="f.password.errors.required">
+              this filed mandatory
+          </div>
+          <div class="text-danger" *ngIf="f.password.errors.minlength || f.password.errors.maxlength">
+            the minimum char is 5 and max is 10
+
+          </div>
+
+
+
+
+        </div>
+        <div  formGroupName= "skills"  >
+          <label for="skill" class="form-label">skill:</label>
+          <input type="text"  class="me-3 ms-2" formControlName="skill" >
+          <input type="text" placeholder="yersr of experance"
+          formControlName="yoe">
+          <label for="level">skill level :</label>
+          <select name="level" id="levelCheck" class="mb-4 mt-2" formControlName="levelCheck">
+          <option value="">--select---</option>
+          <option value="beginer">beginer</option>
+          <option value="intermediate">intermediate</option>
+          <option value="expert">expert</option>
+        </select>
+          
+        </div>
+        <div  formArrayName='hobbies' >
+        <div>
+          <button class="btn btn-warning mb-2" (click)="addHobby()"> add hobby</button>
+        </div>
+        <div *ngFor ="let hobby of hobbyControls; index as i  ">
+          <input type="text" class="form-control mt-2 mb-2" [formControlName]="i">
+        </div>
+
+
+
+        </div>
+        <button type="submit" class="btn btn-primary" >Submit</button>
+     
+    </form>
+
+
+
+
+</div>
