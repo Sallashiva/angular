@@ -1,0 +1,28 @@
+.image{
+    background-size: cover;
+    background-image: url('https://cdn.pixabay.com/photo/2019/12/03/07/34/gift-4669449__340.jpg');
+    height: 40em;
+    background-position:50% 50% ;
+}
+.parent{
+    padding: 20px;
+    border-radius: 10px;
+    height:35px ;
+    width: 600px;
+    box-shadow: 2px 2px 2px 2px beige;
+}
+.tent{
+    
+    border-radius: 10px;
+    height:45px ;
+    width: 100px;
+
+}
+
+.searchBar{
+    padding-top: 200px;
+}
+
+.searchBarAfter{
+    padding-top: 10px;
+}

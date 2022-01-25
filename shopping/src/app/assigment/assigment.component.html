@@ -1,0 +1,59 @@
+<div *ngIf="isLoding" class="text-center" mt-5>
+
+    <app-spinner></app-spinner>
+    <div class=" text-danger"> Loding...</div>
+</div>
+<div class="alert alert-success" *ngIf="message">
+    {{message}}
+
+</div>
+<div class="alert alert-danger" *ngIf="error">
+    {{error}}
+
+</div>
+
+
+<div [ngClass]="'image'">
+    <div class="text-center" [ngClass]>
+
+        <input type="text" [(ngModel)]='placeName' class="mt-2 ms-3" [ngClass]="'parent'"
+            placeholder="Search any or type of url">
+        <button (click)='sendToService()' class="btn btn-success ms-2" [ngClass]="'tent'">Search</button>
+
+    </div>
+
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-md-3 mt-2 mb-3" *ngFor='let kuma of theComp'>
+                <div class="card">
+                    <img [src]="kuma.urlToImage" [alt]="kuma.urlToImage" height="200px" width="100%">
+                    <div class="card-body">
+                        <div>
+                            {{kuma.name}}
+                        </div>
+                        <div>
+                            {{kuma.title}}
+                        </div>
+                        <div>
+                            <a [href]="kuma.url">About artical</a>
+                        </div>
+                        <div>
+                            {{kuma.publishedAt}}
+                        </div>
+                        <div>
+                            {{kuma.content}}
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>  
+            <div class="text-center text-danger fw-bold" *ngIf = "noText">
+                Please search with a valid text...
+            </div>
+
+        
+        </div>
+    </div>
+</div>
