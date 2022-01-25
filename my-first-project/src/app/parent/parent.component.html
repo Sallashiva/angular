@@ -1,0 +1,13 @@
+<div style="background-color:blue;height: 100px;">
+    <p > This is the parent component </p>
+<input type="text" [(ngModel)]="instructions">
+  <h4>{{ replayData }}</h4>
+</div>
+<button (click) = "toggle()" >Click</button>
+
+
+<app-child *ngIf = "isChild" [getInstructions]="instructions" (childEvent)="reciveData($event)">
+  <h1>hello salla shiva kumar</h1>
+  <h1>hello world</h1>
+
+</app-child>

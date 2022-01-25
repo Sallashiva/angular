@@ -1,0 +1,90 @@
+
+
+  <h4 data-bs-toggle="modal" data-bs-target="#staticBackdrop2" class="cursor" [ngClass]="'nani'" (click)="vasthu2()">inbox</h4>
+  <h4 data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="cursor" [ngClass]="'nani'">compose</h4>
+  <h4 data-bs-toggle="modal" data-bs-target="#staticBackdrop1" class="cursor" [ngClass]="'nani'">send</h4>
+  
+  
+
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Compose</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form  #composeForm="ngForm"  (ngSubmit)="onSubmit(composeForm)"> 
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">To</label>
+                    <input type="email" class="form-control"
+                    ngModel name="email"
+                    #email="ngModel">
+    
+                </div>
+                <div class="form-group">
+                    <label for="email1" class="form-label">From </label>
+                    <input type="email" class="form-control"
+                    ngModel name="email1"
+                    #email1="ngModel">
+                    </div>
+               
+                    <div class="form-group">
+                        <label for="text" class="form-label">Subject </label>
+                        <textarea ngModel name="text"  #text="ngModel" rows="4" cols="50"></textarea>
+                </div>
+                <div class="card-footer"> 
+                    <button type="submit" class="btn btn-primary me-3">Send</button>
+                    <button type="reset" class="btn btn-secondary">reset</button>
+    
+    
+                </div>
+                
+            </form>
+    
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">senditem</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h4 *ngFor='let nani of resultArray'>
+                <h2>{{nani}}</h2>
+            </h4>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">inboxitem</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h4 *ngFor='let nani2 of kasti'>
+            <h2>{{nani2}}</h2>
+        </h4>
+          
+        </div>
+       
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,48 @@
+
+<div class="col-md-4 offset-md-4 mt-4 ">
+    <div class="card">
+        <div class="card-header">
+            <div class="text-primary text-center fw-bold">
+                Register
+
+            </div>
+        </div>
+        <div class="card-body">
+            <form  #registerForm="ngForm"  (ngSubmit)="onSubmit(registerForm)"> 
+                
+            <div class="form-group">
+                <label for="fullName" class="form-label">fullName </label>
+                <input type="text" class="form-control"
+                ngModel name="fullName"
+                #fullName="ngModel">
+
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-label">email </label>
+                <input type="email" class="form-control"
+                ngModel name="email"
+                #email="ngModel">
+
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-label">password</label>
+                <input type="password" class="form-control"
+                ngModel name="password"
+                #password="ngModel">
+
+            </div>
+            
+            <div class="card-footer"> 
+                <button type="submit" class="btn btn-primary me-3">submit</button>
+                <button type="reset" class="btn btn-secondary">reset</button>
+
+
+            </div>
+            
+        </form>
+
+
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,41 @@
+<div id="content" #content>
+<table class="table" id="excel-table" >
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">place</th>
+        <th scope="col">Distance</th>
+        <th scope="col">waether</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let place of componentPlaces;index as i'>
+        <th scope="row">{{i+1}}</th>
+        <td>{{place.name}}</td>
+        <td>{{place.distance}}</td>
+        <td>{{place.waether}}</td>
+      </tr>
+ </tbody>
+  </table>
+</div>
+  
+  <button class="btn btn-danger" (click)="convertexel()"> Downlode in excel</button>
+  <button class="btn btn-primary" (click)="savePDF()" [ngClass]="'nanai'" > Downlode in Pdf</button>
+
+
+  
+  <!-- <input type="text" [(ngModel)]='placeName'>
+  <button (click)='sendToService()'>submit</button> -->
+  <!-- <button (click)='data.callingFromHtml()'>shi</button> -->
+<input type="file" (change)="uplodeFile($event)" multiple="false"/>
+
+<table class="table">
+  <tbody>
+      <tr *ngFor="let row of data1">
+          <td *ngFor="let cell of row">
+                     {{cell}}
+          </td>
+
+      </tr>
+  </tbody>
+</table>

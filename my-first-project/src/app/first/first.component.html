@@ -1,0 +1,31 @@
+<div class="col-md-4 offset-md-4"><br><br>
+
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+        <div class="mb-3">
+          <input type="number" class="form-control" id="number1" required placeholder="enter current value"
+           ngModel name="number1Field" #number1Field="ngModel">
+        </div>
+        <div class="mb-3">
+          <input type="number" class="form-control" required id="number" 
+          ngModel name="numberField" #numberField="ngModel" placeholder="enter amount value">
+        </div>
+        <button type="submit"  class="btn btn-primary">Submit</button>
+      </form>
+
+
+      
+
+
+
+</div>
+
+
+
+
+
+<div class="container">
+    <div style="width:100%;">
+        <canvas id="myChart" width="700" height="250" #mychart></canvas>
+     </div>
+
+</div>

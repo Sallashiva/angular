@@ -1,0 +1,66 @@
+<!-- <p>directives works!</p>
+<h1>THE PARK</h1> -->
+<label for="">please enter your name..</label>
+<input type="text" [(ngModel)]="costemerName"><br><br>
+<label for="">please enter age</label>
+<input type="text" [(ngModel)]="costemerAge"><br>
+<button (click)="detailSubmition()">sumbit</button>
+
+<div *ngIf="details">
+    <h2>{{costemerName}}These are amentieis avilable for you</h2>
+    <ul>
+    <li>food</li>
+    <!-- <li *ngIf="notAvilabl"> swemming pool</li> -->
+    <li *ngIf="swemmingPool();else playArea" > swemming pool</li>
+    <ng-template #playArea>
+        <li>playArea</li>
+       </ng-template>
+    <li>gym</li>
+    <li *ngIf="pubPass()">pub</li>
+    
+  
+    </ul>
+    
+</div>
+<!-- <button class="btn btn-warning"> sumbit</button> -->
+
+<!-- <h1> these are our bord memmers</h1>
+<ul *ngFor="let emp of empDetails; first as f;last as l">
+    <p *ngIf='f'> this importent</p>
+    <li><h4> {{emp.empName}} </h4></li>
+    <p>{{emp.empAge}}</p>
+    <p *ngIf='l'> this last</p>
+
+</ul> -->
+
+
+<!-- style pro -->
+<!-- <div *ngIf="details">
+    <h2 [ngStyle]="{'color':textcolor}">{{costemerName}}These are amentieis avilable for you</h2>
+    <ul>
+    <li [ngStyle]="{'color':'green'}">food</li>
+    <li [ngStyle]="{'color':swemmingPool()}"> swemming pool</li>
+
+    <li [ngStyle]="{'color':swemmingPool()}">gym</li>
+    <li [ngStyle]="{'color':pubPass()}">pub</li> -->
+    <!-- "{'color': 'green'}" -->
+  
+    <!-- </ul>
+    
+</div>  -->
+<!-- class pro -->
+<!-- <div *ngIf="details">
+    <h2 [ngClass]="{'color':textcolor}">{{costemerName}}These are amentieis avilable for you</h2>
+    <ul>
+    <li [ngClass]="'success'">food</li>
+    <li [ngClass]="swemmingPool()"> swemming pool</li>
+
+    <li [ngClass]="swemmingPool()">gym</li>
+    <li [ngClass]="pubPass()">pub</li>
+    "{'color': 'green'}"
+  
+    </ul>
+    
+</div>  -->
+
+
